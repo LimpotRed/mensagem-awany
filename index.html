@@ -88,7 +88,7 @@
   <h1 id="mensagem"></h1>
 
   <!-- Botão para mostrar a carta -->
-  <button id="botao-surpresa" onclick="document.getElementById('carta').style.display='block'">Clique aqui 💌</button>
+  <button id="botao-surpresa" style="display:none;" onclick="abrirCarta()">Clique aqui 💌</button>
 
   <!-- Carta escondida -->
   <div id="carta">
@@ -100,6 +100,23 @@
       Quer viver essa história comigo? ❤️
     </p>
   </div>
+
+  <!-- Botões de resposta -->
+  <div id="botoes-resposta" style="display:none; text-align: center; margin-top: 30px;">
+    <button style="font-size: 5vw; padding: 10px 30px; background-color: #f06292; color: white; border: none; border-radius: 10px; margin: 10px; cursor: pointer;" onclick="casamento()">Sim</button>
+    <button style="font-size: 5vw; padding: 10px 30px; background-color: #f06292; color: white; border: none; border-radius: 10px; margin: 10px; cursor: pointer;" onclick="casamento()">Claro</button>
+  </div>
+
+  <script>
+    function abrirCarta() {
+      document.getElementById('carta').style.display = 'block';
+      document.getElementById('botoes-resposta').style.display = 'block';
+    }
+
+    function casamento() {
+      alert('Agora estamos oficialmente web cazados! Kkkkkk 💍💖');
+    }
+  </script>
 
   <!-- Corações flutuando -->
   <div class="heart" style="left:10%; animation-delay: 0s;">❤️</div>
@@ -121,9 +138,12 @@
         document.getElementById("mensagem").innerHTML += texto.charAt(i);
         i++;
         setTimeout(escrever, 60);
+      } else {
+        document.getElementById("botao-surpresa").style.display = 'block';
       }
     }
     escrever();
   </script>
 </body>
 </html>
+
