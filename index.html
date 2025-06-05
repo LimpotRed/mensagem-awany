@@ -1,93 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mensagem para Awani</title>
+  <meta charset="UTF-8">
+  <title>Para Awani 💖</title>
   <style>
     body {
       margin: 0;
-      background: #ffe6f0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      padding: 0;
+      background-color: #ffe6f0;
+      height: 100vh;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
     }
 
-    .mensagem {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 1.6em;
-      color: #d63384;
+    h1 {
+      color: #ff66a3;
       text-align: center;
-      max-width: 90%;
-      line-height: 1.6em;
+      z-index: 2;
+      padding: 20px;
+      max-width: 800px;
     }
 
-    .coracao {
+    .heart {
       position: absolute;
-      width: 20px;
-      height: 20px;
-      background: #ff69b4;
-      transform: rotate(45deg);
-      animation: subir 6s linear infinite;
+      bottom: -50px;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
     }
 
-    .coracao::before,
-    .coracao::after {
+    .heart::before,
+    .heart::after {
       content: "";
       position: absolute;
-      width: 20px;
-      height: 20px;
-      background: #ff69b4;
+      width: 30px;
+      height: 30px;
+      background-color: #ff66a3;
       border-radius: 50%;
     }
 
-    .coracao::before {
-      top: -10px;
+    .heart::before {
+      top: 0;
+      left: 15px;
+    }
+
+    .heart::after {
+      top: 15px;
       left: 0;
     }
 
-    .coracao::after {
-      left: -10px;
-      top: 0;
-    }
-
-    @keyframes subir {
+    @keyframes floatUp {
       0% {
-        transform: translateY(0) rotate(45deg);
+        transform: translateY(0) scale(1);
         opacity: 1;
       }
       100% {
-        transform: translateY(-100vh) rotate(45deg);
+        transform: translateY(-110vh) scale(1.5);
         opacity: 0;
       }
     }
   </style>
 </head>
 <body>
+  <h1>
+    Awani, a um tempo eu fiz um site pareceido para você, naquela época eu gostava bastante de você, mas hoje eu tenho o sentimento de querer que você seja a mãe dos meus filhos, slk você é incrível 💖
+  </h1>
 
-  <div class="mensagem">
-    Awani, há um tempo eu fiz um site parecido para você.<br>
-    Naquela época eu gostava bastante de você,<br>
-    mas hoje eu tenho o sentimento de querer que você seja a mãe dos meus filhos.<br>
-    Slk, você é incrível 💖
-  </div>
-
-  <script>
-    function criarCoracao() {
-      const coracao = document.createElement("div");
-      coracao.classList.add("coracao");
-      coracao.style.left = Math.random() * window.innerWidth + "px";
-      document.body.appendChild(coracao);
-
-      setTimeout(() => {
-        coracao.remove();
-      }, 6000);
-    }
-
-    setInterval(criarCoracao, 300);
-  </script>
-
+  <!-- Corações animados -->
+  <div class="heart" style="left:10%; animation-delay: 0s;"></div>
+  <div class="heart" style="left:20%; animation-delay: 1s;"></div>
+  <div class="heart" style="left:30%; animation-delay: 2s;"></div>
+  <div class="heart" style="left:40%; animation-delay: 3s;"></div>
+  <div class="heart" style="left:50%; animation-delay: 4s;"></div>
+  <div class="heart" style="left:60%; animation-delay: 2.5s;"></div>
+  <div class="heart" style="left:70%; animation-delay: 1.5s;"></div>
+  <div class="heart" style="left:80%; animation-delay: 0.5s;"></div>
+  <div class="heart" style="left:90%; animation-delay: 3.5s;"></div>
 </body>
 </html>
