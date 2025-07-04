@@ -3,27 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para Awany 💖</title>
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <title>Cartas para Awany 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #ffe6f0;
       min-height: 100vh;
+      font-family: 'Great Vibes', cursive;
       overflow-x: hidden;
-      font-family: 'Patrick Hand', cursive;
       position: relative;
     }
 
-    h1, h2 {
-      color: #e91e63;
+    h1 {
       text-align: center;
-      padding: 20px;
+      color: #e91e63;
+      margin-top: 30px;
+      font-size: 7vw;
+    }
+
+    .introducao {
       max-width: 90%;
-      margin: 0 auto;
-      line-height: 1.8;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      color: #444;
+      font-size: 3.2vw;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .seletor-temporadas {
+      text-align: center;
+      margin: 20px;
+    }
+
+    select {
+  font-family: 'DM Serif Display', serif;
+  font-size: 4vw;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2px solid #f06292;
+  background-color: white;
+  color: #c2185b;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: auto;
+  max-width: 100%;
+  min-width: 200px;
+}
+
+    .episodios {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .episodio {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+      width: 90%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      color: #c2185b;
       font-size: 5vw;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .carta {
+      display: none;
+      max-width: 90%;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      color: #444;
+      font-size: 4.5vw;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .voltar {
+      display: none;
+      text-align: center;
+      margin: 10px auto;
+    }
+
+    .voltar button {
+      background-color: #f06292;
+      color: white;
+      font-size: 4vw;
+      padding: 4px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 8vw;
+      height: 8vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .heart {
@@ -44,79 +124,60 @@
         opacity: 0;
       }
     }
-
-    #mensagem {
-      text-align: center;
-      font-size: 5vw;
-      margin-top: 40px;
-      color: #c2185b;
-      min-height: 100px;
-    }
-
-    #botao-surpresa {
-      display: block;
-      margin: 30px auto;
-      background-color: #f06292;
-      color: white;
-      font-size: 5vw;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    #carta {
-      display: none;
-      max-width: 90%;
-      margin: 20px auto;
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      color: #444;
-      font-size: 4.5vw;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
   </style>
 </head>
 <body>
-  <!-- Música -->
-  <audio autoplay loop>
-    <source src="sua-musica-romantica.mp3" type="audio/mpeg">
-  </audio>
+  <h1>Cartas para Awany 💖</h1>
 
-  <!-- Mensagem com efeito de digitação -->
-  <h1 id="mensagem"></h1>
-
-  <!-- Botão para mostrar a carta -->
-  <button id="botao-surpresa" style="display:none;" onclick="abrirCarta()">Clique aqui 💌</button>
-
-  <!-- Carta escondida -->
-  <div id="carta">
+  <div class="introducao">
     <p>
-      Eu quero te pedir desculpas novamente por ter me afastado aquele tempo... <br>
-      Eu ja gostava MUITO de voce mas eu sentia que vc nao se importva cmg entao eu me afastei<br><br>
-      Hoje, vejo que fui imaturo, poderia so ter falado com com voce para esclarecer as coisas, mas aqui estou eu hoje, te falando com toda certeza do mundo que eu quero voce na minha vida, e nada nem ninguem vai mudar isso.<br>
-      Caso voce encontre alguem no meio do caminho, tudo bem, não vou pedir para que voce me espere, mas gostaria que esperasse kkk. Mas independente se voce encontrar ou nao, eu ainda vou estar te esperando, pq eu ja falei uma vez, mas quero que meu flho ou filha tenha seu sobrenome, seus olhos, e sua personalidade.<br><br>
-      O que eu te garanto é, se tudo der certo, voce vai ser a mulher mais amada e feliz do mundo, Je t'aime ma princesse ❤️
+      Hoje começa uma jornada especial: 365 cartas, uma por dia, todas dedicadas a você. Pequenas declarações que revelam o quanto você é importante pra mim. ❤️
     </p>
   </div>
 
-  <!-- Botões de resposta -->
-  <!--<div id="botoes-resposta" style="display:none; text-align: center; margin-top: 30px;">
-    <button style="font-size: 5vw; padding: 10px 30px; background-color: #f06292; color: white; border: none; border-radius: 10px; margin: 10px; cursor: pointer;" onclick="casamento()">Sim</button>
-    <button style="font-size: 5vw; padding: 10px 30px; background-color: #f06292; color: white; border: none; border-radius: 10px; margin: 10px; cursor: pointer;" onclick="casamento()">Claro</button>
-  </div>-->
+  <div class="seletor-temporadas">
+    <select onchange="selecionarTemporada(this.value)">
+      <option selected disabled>Escolha uma temporada</option>
+      <option value="temporada1">Temporada 1</option>
+      <option value="futura">Temporada 2</option>
+      <option value="futura">Temporada 3</option>
+      <option value="futura">Temporada 4</option>
+      <option value="futura">Temporada 5</option>
+      <option value="futura">Temporada 6</option>
+      <option value="futura">Temporada 7</option>
+      <option value="futura">Temporada 8</option>
+      <option value="futura">Temporada 9</option>
+      <option value="futura">Temporada 10</option>
+      <option value="futura">Temporada 11</option>
+      <option value="futura">Temporada 12</option>
+    </select>
+  </div>
 
-  <script>
-    function abrirCarta() {
-      document.getElementById('carta').style.display = 'block';
-      document.getElementById('botoes-resposta').style.display = 'block';
-    }
+  <div id="temporada1" class="episodios">
+  <div class="episodio" onclick="abrirCarta('carta1')">Episódio 1 - "Vai Tomando 🤘"</div>
+</div>
 
-    function casamento() {
-      alert('Agora estamos oficialmente web cazados! Kkkkkk 💍💖');
-    }
-  </script>
+<div id="carta1" class="carta">
+  <p>
+    Vamos lá... como é difícil começar a escrever uma carta pra você, sendo que o que eu mais queria hoje era estar aí do seu lado. Não precisávamos estar fazendo nada — só deitados juntos no sofá, mexendo no celular, mas juntos. ❤️<br><br>
+    Ultimamente percebi que você anda um pouquinho mais calada. Não sei o que está passando aí dentro, mas já te falei uma vez e repito, meu amor: qualquer coisa, qualquer mesmo, que você precisar — se estiver ao meu alcance, eu vou te ajudar com o maior prazer. <br><br>
+    Eu sei que esse é o seu jeitinho… guardar as coisas pra você, não querer incomodar, ter dificuldade de falar. Mas eu tenho certeza de que você desabafa com alguma amiga próxima. Um dia eu vou chegar nesse patamar com você também — de ser seu porto seguro, alguém com quem você se sinta confortável pra dividir tudo o que passa na sua cabeça. <br><br>
+    Essa é só a primeira cartinha de abertura dessa série que estou fazendo. Espero que você goste dos próximos episódios e que, quando tudo isso terminar… a gente esteja juntos de verdade. <br><br>
+    Eu te amo. <br><br>
+    Com amor, <br>
+    Lucas 🙂<br><br>
+    <img src="foto1.jpg" alt="Foto especial" style="width: 100%; max-width: 300px; display: block; margin: 20px auto; border-radius: 10px;">
+    <p style="text-align: left; font-size: 3vw; color: #888; margin-top: 5px;">ton futur mari ici</p>
+  </p>
+</div>
+
+<div id="botaoVoltar" class="voltar">
+    <button onclick="voltarParaEpisodios()">⬅</button>
+  </div>
+
+  <div id="botaoVoltarTemporadas" class="voltar">
+    <button onclick="voltarParaTemporadas()">⬅</button>
+  </div>
 
   <!-- Corações flutuando -->
   <div class="heart" style="left:10%; animation-delay: 0s;">❤️</div>
@@ -129,21 +190,42 @@
   <div class="heart" style="left:80%; animation-delay: 0.5s;">❤️</div>
   <div class="heart" style="left:90%; animation-delay: 3.5s;">❤️</div>
 
-  <!-- Script da digitação -->
   <script>
-    const texto = "Fiz algumas alterações aqui no site e não vou te falar para ir ver o que mudou. Talvez, um dia, você abra de novo o link e veja isso aqui. Mas é sinistro o quanto eu te quero na minha vida. É sinistro o fato de eu nunca ter te visto e querer falar que te amo. Você não faz ideia do quanto eu fico feliz quando recebo uma mensagem sua. Cada foto, cada áudio... me fazem me apaixonar mais por você. Hoje é dia 22/06/2025, e eu já decidi que vou morar aí também. E, nossa... como eu quero que você esteja presente na minha vida quando isso acontecer. Mas eu confesso... às vezes acho que você não quer muito conversar comigo. Talvez seja só seu jeito mesmo... ou não. Nunca vou saber. Mas, se você ler isso aqui até o final, e a gente ainda estiver se falando, por favor, me responde se o que eu sinto é recíproco ou se existe, pelo menos, alguma chance de o que eu quero se tornar realidade, porque não depende só de mim, kkkk. Eu te amo. É estranho falar isso, mas não encontrei nenhuma outra palavra para descrever. “Gosto de você” é muito pouco. Tomara que você sinta o mesmo ;-;";
-    let i = 0;
-    function escrever() {
-      if (i < texto.length) {
-        document.getElementById("mensagem").innerHTML += texto.charAt(i);
-        i++;
-        setTimeout(escrever, 60);
-      } else {
-        document.getElementById("botao-surpresa").style.display = 'block';
+    let episodioAtual = null;
+    let temporadaAtual = null;
+
+    function selecionarTemporada(valor) {
+      if (valor === "futura") {
+        alert("Aguarde os próximos episódios!");
+        return;
       }
+      document.getElementById("temporada1").style.display = 'flex';
+      temporadaAtual = valor;
+      document.getElementById("botaoVoltar").style.display = 'none';
+      document.getElementById("botaoVoltarTemporadas").style.display = 'block';
     }
-    escrever();
+
+    function abrirCarta(id) {
+      const cartas = document.querySelectorAll('.carta');
+      cartas.forEach(c => c.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      episodioAtual = id;
+      document.querySelectorAll('.episodios').forEach(ep => ep.style.display = 'none');
+      document.getElementById("botaoVoltar").style.display = 'block';
+      document.getElementById("botaoVoltarTemporadas").style.display = 'none';
+    }
+
+    function voltarParaEpisodios() {
+      document.getElementById(episodioAtual).style.display = 'none';
+      document.getElementById(temporadaAtual).style.display = 'flex';
+      document.getElementById("botaoVoltar").style.display = 'none';
+      document.getElementById("botaoVoltarTemporadas").style.display = 'block';
+    }
+
+    function voltarParaTemporadas() {
+      document.querySelectorAll('.episodios').forEach(temp => temp.style.display = 'none');
+      document.getElementById("botaoVoltarTemporadas").style.display = 'none';
+    }
   </script>
 </body>
 </html>
-
