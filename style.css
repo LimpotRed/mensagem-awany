@@ -1,0 +1,189 @@
+body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffe6f0, #ffe0ec, #ffd6e8);
+      background-size: 400% 400%;
+      animation: backgroundMove 15s ease infinite;
+      font-family: 'Great Vibes', cursive;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    @keyframes backgroundMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      text-align: center;
+      color: #e91e63;
+      margin-top: 30px;
+      font-size: 7vw;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .introducao {
+      max-width: 90%;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      color: #444;
+      font-size: 3.2vw;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .seletor-temporadas {
+      text-align: center;
+      margin: 20px;
+    }
+
+    select {
+      font-family: 'DM Serif Display', serif;
+      font-size: 4vw;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 2px solid #f06292;
+      background: linear-gradient(to right, #fff, #ffe6f0);
+      color: #c2185b;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    select:hover {
+      transform: scale(1.05);
+    }
+
+    .episodios {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .episodio {
+      background-color: white;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 10px;
+      width: 90%;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      color: #c2185b;
+      font-size: 5vw;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .episodio:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    .carta {
+      display: none;
+      max-width: 90%;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      color: #444;
+      font-size: 4.5vw;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transition: opacity 1s ease, transform 0.5s ease;
+      transform: scale(0.95);
+    }
+
+    .carta.mostrar {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .voltar {
+      display: none;
+      text-align: center;
+      margin: 10px auto;
+    }
+
+    .voltar button {
+      background: linear-gradient(to right, #f06292, #ec407a);
+      color: white;
+      font-size: 4vw;
+      padding: 10px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 10vw;
+      height: 10vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    .voltar button:hover {
+      transform: scale(1.1);
+    }
+
+    .heart {
+      position: fixed;
+      font-size: 6vw;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+      z-index: 1;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100vh;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translate(-50%, 0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -110vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    #music-btn {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      z-index: 999;
+      background: linear-gradient(to right, #e91e63, #f06292);
+      color: white;
+      font-size: 4vw;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    #music-btn:hover {
+      transform: scale(1.05);
+    }

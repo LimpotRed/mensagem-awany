@@ -5,126 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cartas para Awany 💌</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #ffe6f0;
-      min-height: 100vh;
-      font-family: 'Great Vibes', cursive;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    h1 {
-      text-align: center;
-      color: #e91e63;
-      margin-top: 30px;
-      font-size: 7vw;
-    }
-
-    .introducao {
-      max-width: 90%;
-      margin: 20px auto;
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      color: #444;
-      font-size: 3.2vw;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .seletor-temporadas {
-      text-align: center;
-      margin: 20px;
-    }
-
-    select {
-      font-family: 'DM Serif Display', serif;
-      font-size: 4vw;
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 2px solid #f06292;
-      background-color: white;
-      color: #c2185b;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      width: auto;
-      max-width: 100%;
-      min-width: 200px;
-    }
-
-    .episodios {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-    }
-
-    .episodio {
-      background-color: white;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 10px;
-      width: 90%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      color: #c2185b;
-      font-size: 5vw;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .carta {
-      display: none;
-      max-width: 90%;
-      margin: 20px auto;
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      color: #444;
-      font-size: 4.5vw;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .voltar {
-      display: none;
-      text-align: center;
-      margin: 10px auto;
-    }
-
-    .voltar button {
-      background-color: #f06292;
-      color: white;
-      font-size: 4vw;
-      padding: 4px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      width: 8vw;
-      height: 8vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .heart {
-      position: absolute;
-      font-size: 6vw;
-      animation: floatUp 6s linear infinite;
-      opacity: 0.8;
-      z-index: 1;
-    }
-
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-110vh) scale(1.5);
-        opacity: 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Cartas para Awany 💖</h1>
@@ -140,16 +21,6 @@
       <option selected disabled>Escolha uma temporada</option>
       <option value="temporada1">Temporada 1</option>
       <option value="futura">Temporada 2</option>
-      <option value="futura">Temporada 3</option>
-      <option value="futura">Temporada 4</option>
-      <option value="futura">Temporada 5</option>
-      <option value="futura">Temporada 6</option>
-      <option value="futura">Temporada 7</option>
-      <option value="futura">Temporada 8</option>
-      <option value="futura">Temporada 9</option>
-      <option value="futura">Temporada 10</option>
-      <option value="futura">Temporada 11</option>
-      <option value="futura">Temporada 12</option>
     </select>
   </div>
 
@@ -160,10 +31,11 @@
     <div class="episodio" onclick="abrirCarta('carta4')">Episódio 4 - "Sem Pressa, Sem Promessa"</div>
     <div class="episodio" onclick="abrirCarta('carta5')">Episódio 5 - "Admirando Você"</div>
     <div class="episodio" onclick="abrirCarta('carta6')">Episódio 6 - "Desculpe se fiz algo de errado"</div>
-
+    <div class="episodio" onclick="abrirCarta('carta7')">Episódio 7 - "Maldia quinta vey"</div>
   </div>
 
-  <div id="carta1" class="carta">
+  <!-- Suas cartas aqui (como no código original) -->
+ <div id="carta1" class="carta">
     <p>
       Vamos lá... como é difícil começar a escrever uma carta pra você, sendo que o que eu mais queria hoje era estar aí do seu lado. Não precisávamos estar fazendo nada — só deitados juntos no sofá, mexendo no celular, mas juntos. ❤️<br><br>
       Ultimamente percebi que você anda um pouquinho mais calada. Não sei o que está passando aí dentro, mas já te falei uma vez e repito, meu amor: qualquer coisa, qualquer mesmo, que você precisar — se estiver ao meu alcance, eu vou te ajudar com o maior prazer. <br><br>
@@ -245,6 +117,33 @@ Com muito amor, ❤️
     
 </div>
 
+<div id="carta7" class="carta">
+  <p>
+    Mano, cê nun tem ideia. Fui trabalhar hoje cedo e o carro não ligava de jeito nenhum. Fiquei uns 30 minutos tentando descobrir o que era, até que lembrei que tinha colocado álcool no tanque. Aí percebi que tava mais frio que o normal… descobri o motivo da zica, kkkkk.
+  </p>
+
+  <p>
+    Cheguei uma hora atrasado, pelo menos tinha cachorro quente de café da manhã, vai tomando kkkkkk.
+  </p>
+
+  <p>
+    Mudando de assunto… releva aquela carta anterior. Parei pra pensar e, pô, você tá aí do outro lado do mundo, e eu aqui falando besteira no WhatsApp.
+  </p>
+
+  <p>
+    É que eu gosto tanto de você, quero tanto que seja você… que toda vez que digo <strong>“eu te amo”</strong>, não é da boca pra fora.<br>
+    Vem do fundo do meu coração — que brilha só pra você.
+  </p>
+
+  <p>
+    Sinto sua falta, minha japinha.<br>
+    Com amor, <br>
+    Lucas 🙂
+  </p>
+
+  <img src="foto7.jpg" alt="Foto especial" style="width: 100%; max-width: 300px; display: block; margin: 20px auto; border-radius: 10px;">
+  <p style="text-align: left; font-size: 3vw; color: #888; margin-top: 5px;">Hâte de te voir un jour</p>
+</div>
 
   <div id="botaoVoltar" class="voltar">
     <button onclick="voltarParaEpisodios()">⬅</button>
@@ -254,7 +153,7 @@ Com muito amor, ❤️
     <button onclick="voltarParaTemporadas()">⬅</button>
   </div>
 
-  <!-- Corações flutuando -->
+  <!-- Corações flutuantes -->
   <div class="heart" style="left:10%; animation-delay: 0s;">❤️</div>
   <div class="heart" style="left:20%; animation-delay: 1s;">❤️</div>
   <div class="heart" style="left:30%; animation-delay: 2s;">❤️</div>
@@ -264,6 +163,13 @@ Com muito amor, ❤️
   <div class="heart" style="left:70%; animation-delay: 1.5s;">❤️</div>
   <div class="heart" style="left:80%; animation-delay: 0.5s;">❤️</div>
   <div class="heart" style="left:90%; animation-delay: 3.5s;">❤️</div>
+
+  <!-- Botão e áudio -->
+  <audio id="bg-music" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+  <button id="music-btn" onclick="toggleMusic()">🎵 Música</button>
 
   <script>
     let episodioAtual = null;
@@ -282,8 +188,15 @@ Com muito amor, ❤️
 
     function abrirCarta(id) {
       const cartas = document.querySelectorAll('.carta');
-      cartas.forEach(c => c.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
+      cartas.forEach(c => {
+        c.classList.remove('mostrar');
+        c.style.display = 'none';
+      });
+
+      const carta = document.getElementById(id);
+      carta.style.display = 'block';
+      setTimeout(() => carta.classList.add('mostrar'), 100);
+
       episodioAtual = id;
       document.querySelectorAll('.episodios').forEach(ep => ep.style.display = 'none');
       document.getElementById("botaoVoltar").style.display = 'block';
@@ -301,6 +214,36 @@ Com muito amor, ❤️
       document.querySelectorAll('.episodios').forEach(temp => temp.style.display = 'none');
       document.getElementById("botaoVoltarTemporadas").style.display = 'none';
     }
+
+    // Música de fundo
+    const music = document.getElementById("bg-music");
+    let tocando = false;
+    music.volume = 0.2;
+
+
+    function toggleMusic() {
+      if (!tocando) {
+        music.play();
+        tocando = true;
+        document.getElementById("music-btn").innerText = "⏸ Pausar";
+      } else {
+        music.pause();
+        tocando = false;
+        document.getElementById("music-btn").innerText = "🎵 Música";
+      }
+    }
+
+    // Corações explodindo
+    function criarExplosaoDeCoracao() {
+      const heart = document.createElement('div');
+      heart.classList.add('exploding-heart');
+      heart.innerText = ['💖', '💕', '💘', '❤️'][Math.floor(Math.random() * 4)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = Math.random() * 100 + 'vh';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 1500);
+    }
+    setInterval(criarExplosaoDeCoracao, 500);
   </script>
 </body>
 </html>
