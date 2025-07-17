@@ -40,7 +40,7 @@ body {
     border-top-right-radius: 100px;
     rotate: 315deg;
     z-index: 1000;
-    animation: animateHeart 2s steps(1) infinite;
+    
 }
 .heart::after
 {
@@ -55,7 +55,7 @@ body {
     border-top-right-radius: 100px;
     rotate: 45deg;
     z-index: 1000;
-    animation: animateHeart 2s steps(1) infinite;
+    
 }
 @keyframes animateHeart
 {
