@@ -1,7 +1,7 @@
 body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #ffe6f0, #ffe0ec, #ffd6e8);
+      background: radial-gradient(#4c0c0c, #000);
       background-size: 400% 400%;
       animation: backgroundMove 15s ease infinite;
       font-family: 'Great Vibes', cursive;
@@ -17,10 +17,12 @@ body {
 
     h1 {
       text-align: center;
-      color: #e91e63;
+      color: #edb9ce;
       margin-top: 30px;
       font-size: 7vw;
       animation: fadeInDown 1.2s ease-out;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+     
     }
 
     @keyframes fadeInDown {
@@ -31,13 +33,16 @@ body {
     .introducao {
       max-width: 90%;
       margin: 20px auto;
-      background-color: white;
+      background-color: transparent;
       border-radius: 10px;
       padding: 20px;
-      color: #444;
+      color: #f6d6d6;
       font-size: 5.2vw;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
       animation: fadeInUp 1s ease forwards;
+      border-bottom: 1px solid rgba(238, 224, 224, 0.05);
+      -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, transparent, transparent, #0005);
+      
     }
 
     .seletor-temporadas {
@@ -50,9 +55,9 @@ body {
       font-size: 4vw;
       padding: 12px 18px;
       border-radius: 12px;
-      border: 2px solid #f06292;
-      background: linear-gradient(to right, #fff, #ffe6f0);
-      color: #c2185b;
+      border: 2px solid #edb9ce;
+      background: linear-gradient(transparent);
+      color: #edb9ce;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
@@ -70,17 +75,18 @@ body {
     }
 
     .episodio {
-      background-color: white;
+      background-color: transparent;
       border-radius: 12px;
       padding: 15px;
       margin: 10px;
       width: 90%;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-      color: #c2185b;
+      box-shadow: 0 0 12px rgba(255, 228, 228, 0.1);
+      color: #edb9ce;
       font-size: 5vw;
       text-align: center;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .episodio:hover {
@@ -115,8 +121,8 @@ body {
     }
 
     .voltar button {
-      background: linear-gradient(to right, #f06292, #ec407a);
-      color: white;
+      background: linear-gradient(transparent);
+      color: rgb(244, 204, 204);
       font-size: 4vw;
       padding: 10px;
       border: none;
@@ -129,6 +135,7 @@ body {
       justify-content: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: transform 0.2s;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .voltar button:hover {
@@ -173,15 +180,16 @@ body {
       bottom: 15px;
       right: 15px;
       z-index: 999;
-      background: linear-gradient(to right, #e91e63, #f06292);
-      color: white;
+      background: linear-gradient(transparent);
+      color: rgb(180, 163, 163);
       font-size: 4vw;
       padding: 10px 20px;
       border-radius: 50px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(245, 83, 83, 0.2);
       transition: transform 0.3s ease;
+      
     }
 
     #music-btn:hover {
