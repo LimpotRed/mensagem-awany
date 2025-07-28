@@ -361,18 +361,6 @@ Com muito amor, ❤️
         document.getElementById("music-btn").innerText = "🎵 Música";
       }
     }
-
-    // Corações explodindo
-    function criarExplosaoDeCoracao() {
-      const heart = document.createElement('div');
-      heart.classList.add('exploding-heart');
-      heart.innerText = ['💖', '💕', '💘', '❤️'][Math.floor(Math.random() * 4)];
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.top = Math.random() * 100 + 'vh';
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 1500);
-    }
-    setInterval(criarExplosaoDeCoracao, 500);
   </script>
 </body>
 </html>
