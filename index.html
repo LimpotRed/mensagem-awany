@@ -32,6 +32,33 @@
         rain();
     }, 50);
 
+
+        function createShootingStar() {
+  const star = document.createElement('div');
+  star.classList.add('shooting-star');
+
+  // posição aleatória horizontal de onde começa
+  const startLeft = Math.random() * window.innerWidth * 0.8;
+
+  star.style.left = `${startLeft}px`;
+
+  document.body.appendChild(star);
+
+  // Remove após a animação acabar
+  setTimeout(() => {
+    star.remove();
+  }, 1600); // duração da animação + margem
+}
+
+function loopStars() {
+  setTimeout(() => {
+    createShootingStar();
+    loopStars(); // chama de novo recursivamente
+  }, Math.random() * 5000 + 2000); // entre 2s e 7s
+}
+
+loopStars();
+
     </script>
 </body>
 </html>
