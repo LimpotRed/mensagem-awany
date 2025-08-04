@@ -25,7 +25,8 @@
     <select onchange="selecionarTemporada(this.value)">
       <option selected disabled>Escolha uma temporada</option>
       <option value="temporada1">Temporada 1</option>
-      <option value="futura">Temporada 2</option>
+      <option value="temporada2">Temporada 2</option>
+      <option value="temporada3">Temporada 3</option>
     </select>
   </div>
 
@@ -43,6 +44,10 @@
     <div class="episodio" onclick="abrirCarta('carta11')">Episódio 11 - "Nosso Jeito de Ser 🌙"</div>
     <div class="episodio" onclick="abrirCarta('carta12')">Episódio 12 - "Entre Pixels e Destinos 🌌"</div>
     <div class="episodio" onclick="abrirCarta('carta13')">Episódio 13 - "Eu te amo ❤️"</div>
+  </div>
+
+  <div id="temporada2" class="episodios">
+    <div class="episodio" onclick="abrirCarta('carta14')">Episódio 1 - "Recomeços 🌅"</div>
   </div>
 
   <!-- Suas cartas aqui (como no código original) -->
@@ -342,7 +347,23 @@ Com muito amor, ❤️
 
 <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
+  <div id="carta14" class="carta">
+  <p>
+    Minha princesa...<br><br>
+    Aqui começa a nova fase dessa história. Já passamos por tantas emoções, risadas, desabafos... mas tudo isso é só o começo. ❤️<br><br>
+    Cada palavra que eu escrevo aqui é mais um passo em direção a você. Ainda que estejamos longe, minha intenção é te fazer sentir perto — mesmo que por letras na tela.<br><br>
+    Hoje inauguro a Temporada 2 com ainda mais amor, mais carinho, e a certeza de que cada carta é feita com o coração inteiro. <br><br>
+    Vamos seguir juntos, mesmo à distância, por mais 365 batidas do meu coração.<br><br>
+    Te amo!<br>
+    — Lucas 🌹
 
+
+     <img src="fotos/foto14.jpg" alt="Foto especial" style="width: 100%; max-width: 300px; display: block; margin: 20px auto; border-radius: 10px;">
+      <p style="text-align: left; font-size: 3vw; color: #888; margin-top: 5px;">Je veux toujours te voir sur l'autel.</p>
+    </p>
+  </div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
   <div id="botaoVoltar" class="voltar">
     <button onclick="voltarParaEpisodios()">⬅</button>
@@ -375,16 +396,21 @@ Com muito amor, ❤️
     let temporadaAtual = null;
 
     function selecionarTemporada(valor) {
-      if (valor === "futura") {
-        alert("Aguarde os próximos episódios!");
-        return;
-      }
-      document.getElementById("temporada1").style.display = 'flex';
-      temporadaAtual = valor;
-      document.getElementById("botaoVoltar").style.display = 'none';
-      document.getElementById("botaoVoltarTemporadas").style.display = 'block';
-    }
+  document.querySelectorAll('.episodios').forEach(temp => temp.style.display = 'none');
 
+  if (valor === "temporada3") {
+    alert("Aguarde os próximos episódios!");
+    return;
+  }
+
+  const tempSelecionada = document.getElementById(valor);
+  if (tempSelecionada) {
+    tempSelecionada.style.display = 'flex';
+    temporadaAtual = valor;
+    document.getElementById("botaoVoltar").style.display = 'none';
+    document.getElementById("botaoVoltarTemporadas").style.display = 'block';
+  }
+}
     function abrirCarta(id) {
       const cartas = document.querySelectorAll('.carta');
       cartas.forEach(c => {
