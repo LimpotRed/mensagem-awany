@@ -56,6 +56,10 @@
 
   </div>
 
+  <div id="temporada3" class="episodios">
+    <div class="episodio" onclick="abrirCarta('carta20')">Episódio 1 - " Uma poesia para voce"</div>
+  </div>
+
   <!-- Suas cartas aqui (como no código original) -->
   <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
  <div id="carta1" class="carta">
@@ -478,7 +482,36 @@ Com muito amor, ❤️
   </div>
 
 <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
+<div id="carta20" class="carta">
+  <p>
+  Eu sei que nos conhecemos tem pouco tempo,<br>
+  e eu nao quero parecer muito apressado.<br>
+  Mas é que eu não consegui dormir ontem a noite<br>
+  porque eu nao lembrava seu nome completo.<br>
+  Nem como voce gosta do seu café.<br>
+  E por alguma razão, não existe nada no mundo<br>
+  que eu querira saber mais que isso.<br>
+  Exceto talvez como fica seu cabelo bagunçado de manhã.<br>
+  E o que te faz rir ate chorar,<br>
+  ou o que te faz rir quando esta chorando.<br>
+  Qualquer uma dessas respostas ja seria o suficiente,<br>
+  e eu sei que nunca nem nos vivos, e eu nao quero parecer muito apressado.<br>
+  Mas eu nao consegui me concentrar hoje cedo, porque eu nao sei sua comida favorita.<br>
+  E os sonhos que voce nunca diz em voz alta, mas secretamente deseja tornalos realidade.<br>
+  E se eu te desse flores? Voce gostaria que elas fossem azuis?<br>
+  E eu sei que nos conhecemos tem pouco tempo,<br>
+  E eu nao quero parecer muito apressado.<br>
+  Mas é que derrepente a sua voz ficou na minha cabeça,<br>
+  tocando repetidamente...<br>
+  E provavelmente eu nunca vou dizer isso em voz alta,<br>
+  e talvez eu deva dormir um pouco mais,<br>
+  mas é que derrepente, tudo que e significativo pra voce,<br>
+  se tornou significativo pra mim tambem.<br><br>
+  
+     <img src="fotos/foto20.jpg" alt="Foto especial" style="width: 100%; max-width: 200px; display: block; margin: 20px auto; border-radius: 10px;">
+      <p style="text-align: left; font-size: 3vw; color: #888; margin-top: 5px;">.Mon âme ressent la tienne.</p>
+    </p>
+  </div>
 
 
   <div id="botaoVoltar" class="voltar">
@@ -514,10 +547,6 @@ Com muito amor, ❤️
     function selecionarTemporada(valor) {
   document.querySelectorAll('.episodios').forEach(temp => temp.style.display = 'none');
 
-  if (valor === "temporada3") {
-    alert("Aguarde os próximos episódios!");
-    return;
-  }
 
   const tempSelecionada = document.getElementById(valor);
   if (tempSelecionada) {
