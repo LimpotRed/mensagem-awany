@@ -160,6 +160,13 @@ body {
       top: 100vh;
       
     }
+    .video-carta {
+  width: 100%;
+  max-width: 280px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+}
 
     @keyframes floatUp {
       0% {
